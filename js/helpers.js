@@ -1,16 +1,16 @@
 const CARDS_CONFIG = [
-  { value: 1, colorClass: "colorGroup1" },
-  { value: 2, colorClass: "colorGroup2" },
-  { value: 3, colorClass: "colorGroup3" },
-  { value: 4, colorClass: "colorGroup2" },
-  { value: 5, colorClass: "colorGroup3" },
-  { value: 6, colorClass: "colorGroup4" },
-  { value: 7, colorClass: "colorGroup4" },
-  { value: 8, colorClass: "colorGroup1" },
-  { value: 9, colorClass: "colorGroup3" },
+  { value: 1, colorClassName: "colorGroup1" },
+  { value: 2, colorClassName: "colorGroup2" },
+  { value: 3, colorClassName: "colorGroup3" },
+  { value: 4, colorClassName: "colorGroup2" },
+  { value: 5, colorClassName: "colorGroup3" },
+  { value: 6, colorClassName: "colorGroup4" },
+  { value: 7, colorClassName: "colorGroup4" },
+  { value: 8, colorClassName: "colorGroup1" },
+  { value: 9, colorClassName: "colorGroup3" },
 ];
 
-const EMPTY_ARRAY = [];
+const EMPTY_ARRAY = Object.seal([]);
 
 function sort(list = EMPTY_ARRAY) {
   const sortedLList = list.sort(
@@ -45,7 +45,7 @@ function render(grid, list = EMPTY_ARRAY) {
   for (let index = 0; index < list.length; index++) {
     const card = createCard();
     card.innerText = list[index].value;
-    card.classList.add(list[index].colorClass);
+    card.classList.add(list[index].colorClassName);
     grid.appendChild(card);
   }
 }
