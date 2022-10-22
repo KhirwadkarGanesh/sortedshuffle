@@ -35,17 +35,17 @@ function shuffle(list = EMPTY_ARRAY) {
   return list;
 }
 
-function createCard() {
+function makeCard(index, list) {
   const card = document.createElement("li");
-  card.classList.add("card");
+  card.innerText = list[index].value;
+  card.classList.add("card", list[index].colorClassName);
+
   return card;
 }
 
 function render(grid, list = EMPTY_ARRAY) {
   for (let index = 0; index < list.length; index++) {
-    const card = createCard();
-    card.innerText = list[index].value;
-    card.classList.add(list[index].colorClassName);
+    const card = makeCard(index, list);
     grid.appendChild(card);
   }
 }
