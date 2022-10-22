@@ -1,0 +1,200 @@
+/* Default */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-weight: 200;
+  font-family: sans-serif;
+}
+
+/* Layout */
+.wrapper {
+  margin: auto;
+  max-width: 960px;
+  background: #efefef;
+}
+
+header {
+  text-align: center;
+  border: 1px solid #fff;
+  border-bottom: 0;
+}
+
+.line {
+  background: #333;
+  height: 7px;
+  opacity: 0.25;
+}
+
+.container {
+  display: flex;
+}
+
+.grid {
+  width: 65%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Card */
+.card {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 4rem;
+  background: cadetblue;
+  color: #fff;
+  padding: 0px 15px;
+}
+
+.card:before {
+  padding-top: 100%;
+  content: "";
+  float: left;
+}
+
+/* Controls */
+.controls {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn {
+  font-family: inherit;
+  width: 10rem;
+  height: 2.5rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  text-align: center;
+
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+.btn__cta {
+  background: #72c3dc;
+  color: #fff;
+  border: 1px solid #2b8ead;
+  margin-left: 1rem;
+
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+
+  box-shadow: 0px 3px 0px #2b8ead;
+  -webkit-box-shadow: 0px 3px 0px #2b8ead;
+}
+
+.btn__cta:first-child {
+  margin-top: 1rem;
+}
+
+.btn:active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+}
+
+.btn:hover {
+  background: #72c3dcea;
+}
+
+/* Footer */
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Card color group */
+.colorGroup1 {
+  background: #6f98a8;
+}
+
+.colorGroup2 {
+  background: #2b8ead;
+}
+
+.colorGroup3 {
+  background: #2f454e;
+}
+
+.colorGroup4 {
+  background: #bfbfbf;
+}
+
+@media (max-width: 760px) {
+  .wrapper {
+    background: #fff;
+    min-width: 350px;
+  }
+
+  header {
+    position: sticky;
+    background: #333;
+    color: #fff;
+    top: 0;
+  }
+
+  .line {
+    display: none;
+  }
+
+  main {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .controls {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .btn__cta {
+    height: 3rem;
+    width: 6rem;
+    margin-left: 0.25rem;
+  }
+
+  .btn__cta:first-child {
+    margin: 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .card {
+    border-left: 7px solid;
+    background-color: #efefef;
+    height: 35px;
+    font-size: 1.5rem;
+    color: #000;
+  }
+
+  .colorGroup1 {
+    border-left-color: #6f98a8;
+  }
+
+  .colorGroup2 {
+    border-left-color: #2b8ead;
+  }
+
+  .colorGroup3 {
+    border-left-color: #2f454e;
+  }
+
+  .colorGroup4 {
+    border-left-color: #bfbfbf;
+  }
+}
