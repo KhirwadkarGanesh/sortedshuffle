@@ -26,9 +26,14 @@ function initialRender(grid, cards) {
   render(grid, sortedCards);
 }
 
+function getGridFromDOM() {
+  const grid = document.getElementsByClassName("grid")[0]; // Here only one grid element is present wrt class Name
+  return grid;
+}
+
 function initialise() {
   const cards = [...CARDS_CONFIG];
-  const grid = document.getElementsByClassName("grid")[0]; // Here only one grid element is present wrt class Name
+  const grid = getGridFromDOM();
   addListeners(grid, cards);
   initialRender(grid, cards);
 }
