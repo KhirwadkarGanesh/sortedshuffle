@@ -173,6 +173,7 @@ footer {
   .grid {
     grid-template-columns: 1fr;
     gap: 0.25rem;
+    max-width: 15rem;
   }
 
   .card {
