@@ -1,7 +1,6 @@
 // Helpers
 import { sort, shuffle, render, clearGrid, CARDS_CONFIG } from "./helpers.js";
 
-// Listeners
 function handleShuffle(grid, cards) {
   clearGrid(grid);
   const shuffledCards = shuffle(cards);
