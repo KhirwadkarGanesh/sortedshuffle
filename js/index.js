@@ -33,4 +33,5 @@ function initialise() {
   initialRender(grid, cards);
 }
 
+// boostrap here
 window.onload = initialise;
