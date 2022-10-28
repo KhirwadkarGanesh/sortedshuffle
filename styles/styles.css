@@ -130,7 +130,8 @@ footer {
   background: #bfbfbf;
 }
 
-@media (max-width: 760px) {
+/* Activate this for screens with width lesser or equals 480px*/
+@media (max-width: 480px) {
   .wrapper {
     background: #fff;
     min-width: 350px;
